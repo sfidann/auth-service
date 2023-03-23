@@ -29,7 +29,7 @@ func main() {
 
 	api.Use(a.AuthMiddleware)
 
-	api.Get("/api/get", func(ctx *fiber.Ctx) error {
+	api.Get("/get", func(ctx *fiber.Ctx) error {
 		data, _ := json.Marshal("It works‼")
 		ctx.Response().SetStatusCode(200)
 		ctx.Response().Header.Add("Content-Type", "application/json")
